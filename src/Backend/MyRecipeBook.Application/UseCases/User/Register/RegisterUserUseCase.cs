@@ -1,0 +1,31 @@
+﻿using MyRecipeBook.Communication.Requests;
+using MyRecipeBook.Communication.Responses;
+
+namespace MyRecipeBook.Application.UseCases.User.Register
+{
+    public class RegisterUserUseCase
+    {
+        public ResponseRegisterUser Execute( RequestRegisterUser request)
+        {
+            //Validar a request
+            Validate(request);
+
+            //
+
+
+            return null;
+        }
+
+        public void Validate(RequestRegisterUser request)
+        {
+            var validator = new RegisterUserValidator();
+            var result = validator.Validate(request);
+
+            if (!result.IsValid)
+            {
+                var errorMessages = result.Errors.Select(e=>e.ErrorMessage).ToList();
+                throw new Exception();
+            }
+        }
+    }
+}
