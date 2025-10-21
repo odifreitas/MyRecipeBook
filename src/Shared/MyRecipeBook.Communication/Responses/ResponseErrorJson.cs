@@ -1,0 +1,17 @@
+﻿namespace MyRecipeBook.Communication.Responses
+{
+    public  class ResponseErrorJson
+    {
+        public IList<string> ErrorsMessage { get; set; }
+        
+        public ResponseErrorJson(IList<string> errorsMessage) => ErrorsMessage = errorsMessage;
+
+        public ResponseErrorJson(string errorMessage)
+        {
+            ErrorsMessage = new List<string>
+            {
+                errorMessage
+            };
+        }
+    }
+}
