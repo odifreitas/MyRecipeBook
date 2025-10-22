@@ -11,7 +11,11 @@ namespace MyRecipeBook.Application.UseCases.User.Register
             //Validar a request
             Validate(request);
 
-            //
+            //Map the enttiy
+            var user = new Domain.Entities.User
+            {
+                
+            };
 
 
             return null;
