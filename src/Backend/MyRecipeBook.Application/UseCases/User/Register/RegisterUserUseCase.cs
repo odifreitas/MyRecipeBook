@@ -15,6 +15,8 @@ namespace MyRecipeBook.Application.UseCases.User.Register
             var user = new Domain.Entities.User
             {
                 
+
+
             };
 
 
