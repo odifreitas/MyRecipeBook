@@ -1,4 +1,5 @@
-﻿using MyRecipeBook.Communication.Requests;
+﻿using Mapster;
+using MyRecipeBook.Communication.Requests;
 using MyRecipeBook.Communication.Responses;
 using MyRecipeBook.Exceptions.ExceptionsBase;
 
@@ -12,12 +13,7 @@ namespace MyRecipeBook.Application.UseCases.User.Register
             Validate(request);
 
             //Map the enttiy
-            var user = new Domain.Entities.User
-            {
-                
-
-
-            };
+            var user = request.Adapt<Domain.Entities.User>();
 
 
             return null;
